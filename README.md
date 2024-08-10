@@ -22,8 +22,7 @@ colors = {
     }
 netflix_movies['color'] = netflix_movies['genre'].map(colors)
 
-# Filter out rows where 'color' is NaN
-netflix_movies = netflix_movies.dropna(subset=['color'])
+netflix_movies = netflix_movies.dropna(subset=['color'])  
 
 fig = plt.figure(figsize=(12, 8))
 plt.scatter('release_year', 'duration', data=netflix_movies, c=netflix_movies['color'])
